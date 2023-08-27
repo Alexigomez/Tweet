@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" href="ima/gorjeo.png" type="image/x-icon">
+
+    <script>
+        
+        function agregarTexto() {
+            var inputElement = document.getElementById("inputText");
+            var outputDiv = document.getElementById("outputDiv");
+
+            var texto = inputElement.value;
+            var fechaHora = new Date()
+            var horas = fechaHora.getHours();
+            var minutos = fechaHora.getMinutes();
+            var segundos = fechaHora.getSeconds();
+
+            
+            var formattedHora = horas + ":" + minutos + ":" + segundos;
+
+            var nuevoParrafo = document.createElement("p");
+            nuevoParrafo.textContent = formattedHora + ": " + texto; 
+
+            outputDiv.appendChild(nuevoParrafo);
+
+            inputElement.value = "";
+        }
+        
+        function limpiarTextos() {
+            var outputDiv = document.getElementById("outputDiv");
+            outputDiv.innerHTML = "";
+        }
+
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Twit</title>
+</head>
+<body>
+
+    <div>
+        <div style="margin-top: 150px;">
+        <fieldset class="cuadro">
+            
+            <div class="container">
+
+            <div class="div1" style="margin-top: 80px;">
+                    <img src="ima/gorjeo.png" alt="" class="logo">
+
+                    <label class="texto" for="">Tweet</label>
+                    <label style="font-size: 25px;" for="">Que piensas el dia de hoy?</label>
+                    <input class="inputTweet" type="text" id="inputText" placeholder="Introduce tu texto">
+
+                    <button class="botonCom" onclick="agregarTexto()">Ingresar</button>
+                    <button class="botonEliminar" onclick="limpiarTextos()">Eliminar Textos</button>
+                    
+            </div>
+
+            <div class="div2">
+                <img src="ima/comentario.png" alt="" class="mensaje">
+                <fieldset class="separacion">
+                    <div class="tweet" id="outputDiv"></div>
+                </fieldset>
+            </div>
+
+
+            </div>
+
+        </fieldset>
+    </div>
+    </div>
+    
+</body>
+</html>
+

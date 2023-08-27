@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #6e677c;
+}
+
+.texto{
+  position: absolute;
+  top: 40%;
+  font-family: Arial, sans-serif;
+  font-size: 3ch;
+}
+
+.logo{
+  position: absolute;
+  display:flex;
+  top: 40%;
+  left: 31%;
+  height: 30px;
+  width: 30px;
+}
+.mensaje
+{
+  height: 30px;
+  width: 30px;
+}.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.div1 {
+  flex: 1;
+  padding: 20px;
+}
+
+.div2 {
+  flex: 1;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+label {
+  font-size: 25px;
+}
+
+.inputTweet {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.botonCom, .botonEliminar {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botonCom:hover, .botonEliminar:hover {
+  background-color: #0056b3;
+}
+
+.tweet {
+  margin-top: 20px;
+}
+
+p {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
